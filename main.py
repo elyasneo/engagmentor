@@ -1,6 +1,6 @@
 from ast import literal_eval
-from  igramscraper.instagram import Instagram
-from  igramscraper.model.media import Media
+from  igramscraper.instagram import Instagram # pylint: disable=import-error
+from  igramscraper.model.media import Media # pylint: disable=import-error
 import getpass
 import stdiomask
 import os

@@ -1,28 +1,31 @@
-import time
-import requests
-import re
-import json
-import hashlib
 import getpass
-import stdiomask
-import os
-import sys
-from slugify import slugify
-import random
-from .session_manager import CookieSessionManager
-from .exception.instagram_auth_exception import InstagramAuthException
-from .exception.instagram_exception import InstagramException
-from .exception.instagram_not_found_exception import InstagramNotFoundException
-from .model.account import Account
-from .model.comment import Comment
-from .model.location import Location
-from .model.media import Media
-from .model.story import Story
-from .model.user_stories import UserStories
-from .model.tag import Tag
-from . import endpoints
-from .two_step_verification.console_verification import ConsoleVerification
+import hashlib
 import http.cookiejar
+import json
+import os
+import random
+import re
+import sys
+import time
+
+import requests
+import stdiomask
+from slugify import slugify
+
+from . import endpoints # pylint: disable=import-error
+from .exception.instagram_auth_exception import InstagramAuthException # pylint: disable=import-error
+from .exception.instagram_exception import InstagramException # pylint: disable=import-error
+from .exception.instagram_not_found_exception import InstagramNotFoundException # pylint: disable=import-error
+from .model.account import Account # pylint: disable=import-error
+from .model.comment import Comment # pylint: disable=import-error
+from .model.location import Location # pylint: disable=import-error
+from .model.media import Media # pylint: disable=import-error
+from .model.story import Story # pylint: disable=import-error
+from .model.tag import Tag # pylint: disable=import-error
+from .model.user_stories import UserStories # pylint: disable=import-error
+from .session_manager import CookieSessionManager # pylint: disable=import-error
+from .two_step_verification.console_verification import ConsoleVerification # pylint: disable=import-error
+
 
 class Instagram:
     HTTP_NOT_FOUND = 404
