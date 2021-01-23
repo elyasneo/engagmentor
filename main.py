@@ -34,6 +34,7 @@ while True:
         deleteContent(file)
         file.close()
         print(e)
+        raise e
 
 
 clear()
