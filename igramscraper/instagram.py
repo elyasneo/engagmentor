@@ -1464,8 +1464,6 @@ class Instagram:
 
         time.sleep(self.sleep_between_requests)
         response = self.__req.get(endpoints.BASE_URL, headers=headers)
-        test=response.status_code
-        test2=Instagram.HTTP_OK
 
         if not response.status_code == Instagram.HTTP_OK:
             return False
